@@ -1,0 +1,34 @@
+.section-promo {
+  padding: 60px 0;
+  background-color: #1D1D1C;
+  text-align: center;
+
+  &__text {
+    @include LabGrotesque(300, 28px, 147%, #fff);
+    margin-bottom: 35px;
+  }
+
+  &__button {
+    font-family: sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    background: linear-gradient(107deg, rgba(248, 136, 101, 1) 0%, rgba(247, 212, 175, 1) 75%, rgba(246, 232, 203, 1) 100%);
+    padding: 15px 25px;
+    border-radius: 1px;
+    transition: 0.35s;
+    &:hover{
+      transform: scale(1.1);
+    }
+  }
+
+  @media screen and (max-width:570px){
+    &__text {
+      font-size: 22px;
+    }
+
+    &__button{
+      font-size: 16px;
+      padding: 10px 20px;
+    }
+  }
+}

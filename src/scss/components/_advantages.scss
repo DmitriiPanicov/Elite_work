@@ -1,0 +1,105 @@
+.section-advantages {
+
+  &__container {
+    height: 800px;
+    background: center / contain no-repeat url('../../img/section-advantages/section-image.png');
+    background-size: 85%;
+    text-align: center;
+    position: relative;
+  }
+
+  &__title {
+    display: inline-block;
+    @include LabGrotesque(600, 40px, 125%, transparent);
+    background-clip: text;
+    background-image: linear-gradient(240.22deg, #FFFFFF 45.8%, rgba(255, 255, 255, 0.084) 99.73%);
+    max-width: 670px;
+  }
+
+  &__text {
+    display: inline-block;
+    @include LabGrotesque(300, 20px, 33px, #FFF);
+    margin-top: 22px;
+    max-width: 670px;
+  }
+
+  &__items {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    bottom: 10%;
+    left: calc(0 + var(--container-offset));
+    width: calc(100% - var(--container-offset) * 2);
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+  }
+
+  &__item-icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  &__item-text {
+    @include LabGrotesque(300, 16px, 24px, #FFF);
+    max-width: 160px;
+  }
+
+  @media screen and (max-width:1104px) {
+    &__title {
+      font-size: 34px;
+    }
+  }
+
+  @media screen and (max-width:1024px) {
+    &__container {
+      height: 720px;
+    }
+
+    &__item {
+      flex-direction: column;
+      row-gap: 20px;
+    }
+
+    &__item {
+      transform: scale(0.7);
+    }
+
+  }
+
+  @media screen and (max-width:768px) {
+    &__title {
+      font-size: 30px;
+    }
+
+    &__item {
+      column-gap: 20px;
+    }
+
+    &__item-text {
+      max-width: 140px;
+    }
+  }
+
+  @media screen and (max-width:570px) {
+    &__container {
+      height: 580px;
+    }
+
+    &__title {
+      font-size: 20px;
+    }
+
+    &__text {
+      font-size: 12px;
+    }
+
+    &__item {
+      transform: scale(0.6);
+    }
+
+  }
+}

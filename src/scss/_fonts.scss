@@ -1,0 +1,13 @@
+@font-face {
+  font-family: "LabGrotesque";
+  src: url('../fonts/LabGrotesque-Regular.woff2') format("woff2");
+}
+
+@mixin LabGrotesque($fw, $fz, $lh, $color) {
+  font-family: 'LabGrotesque';
+  font-style: normal;
+  font-weight: $fw;
+  font-size: $fz;
+  line-height: $lh;
+  color: $color;
+}

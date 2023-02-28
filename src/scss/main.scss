@@ -1,0 +1,17 @@
+// базовые подключения
+@import "vars";
+@import "mixins";
+@import "fonts";
+@import "settings";
+
+// подключения компонентов страницы
+@import "./components/header";
+@import "./components/offer";
+@import "./components/advantages";
+@import "./components/refuel.scss";
+@import "./components/speakers";
+@import "./components/describe";
+@import "./components/promo";
+@import "./components/choose-us";
+@import "./components/construstor";
+@import "./components/footer";

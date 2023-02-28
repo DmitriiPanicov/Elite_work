@@ -1,0 +1,21 @@
+:root {
+
+  --content-width: 1194px;
+  --container-offset: 123px;
+  --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+
+  @media screen and (max-width:1024px) {
+    --content-width: 850px;
+    --container-offset: 87px;
+  }
+
+  @media screen and (max-width:768px) {
+    --content-width: 668px;
+    --container-offset: 50px;
+  }
+
+  @media screen and (max-width:570px) {
+    --content-width: 530px;
+    --container-offset: 20px;
+  }
+}

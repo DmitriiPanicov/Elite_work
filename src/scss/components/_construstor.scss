@@ -1,0 +1,254 @@
+.section-constructor {
+  background-color: #1D1D1C;
+  padding: 30px 0;
+
+  &__container {
+    text-align: center;
+  }
+
+  &__title {
+    display: inline-block;
+    @include LabGrotesque(600, 40px, 125%, transparent);
+    background-clip: text;
+    background-image: linear-gradient(240.22deg, #FFFFFF 45.8%, rgba(255, 255, 255, 0.084) 99.73%);
+    margin-bottom: 20px;
+  }
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+  }
+
+  &__row-image,
+  &__row-options {
+    width: 48%;
+  }
+
+
+  .length-range__title {
+    @include LabGrotesque(500, 10px, 550%, rgba(255, 255, 255, 0.5));
+    letter-spacing: 0.2em;
+  }
+
+  .length-range__field {
+    display: flex;
+    align-items: center;
+  }
+
+  .length-range__input {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    margin: 0 20px;
+    height: 2px;
+    background-color: #FFCF7A;
+  }
+
+  .length-range__input::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 30px;
+    height: 30px;
+    background-color: #FFCF7A;
+  }
+
+  .length-range__value {
+    @include LabGrotesque(500, 18px, 306%, #fff);
+  }
+
+  .front-panel__title {
+    @include LabGrotesque(500, 10px, 550%, rgba(255, 255, 255, 0.5));
+    letter-spacing: 0.2em;
+  }
+
+
+  .front-panel-option {
+    max-width: 70%;
+    position: relative;
+  }
+
+  .slider {
+    max-width: 70%;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+
+  .slider-line {
+    display: flex;
+    left: 0;
+    transition: all ease 1s;
+  }
+
+  .slider-prev,
+  .slider-next {
+    position: absolute;
+    bottom: calc(50% - 42px);
+  }
+
+  .button-icon {
+    fill: #FFCF7A;
+    width: 25px;
+    height: 25px;
+  }
+
+  .slider-prev {
+    left: 0;
+  }
+
+  .slider-next {
+    right: 0;
+  }
+
+  .additional-option__title {
+    @include LabGrotesque(500, 10px, 550%, rgba(255, 255, 255, 0.5));
+    letter-spacing: 0.2em;
+  }
+
+  .additional-option__checkboxs {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    column-gap: 30px;
+  }
+
+  .additional-option__checkbox {
+    max-width: 250px;
+  }
+
+  .checkbox {
+    position: relative;
+    margin: 5px 0;
+  }
+
+  .checkbox__input {
+    -webkit-appearance: none;
+    appearance: none;
+    position: absolute;
+  }
+
+  .checkbox__label {
+    font-size: 1rem;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  .checkbox__label:before {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #CEB787;
+    border-radius: 2px;
+    position: absolute;
+    top: 0;
+    left: calc(100% - 20px);
+    z-index: 1;
+  }
+
+  .checkbox__label:after {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 20px;
+    background: url("../../img/svg/section-constuctor/chackbox.svg") no-repeat;
+    background-size: 20px 20px;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: calc(100% - 20px);
+    z-index: 2;
+  }
+
+  .checkbox__input:checked+.checkbox__label:before {
+    background-color: #CEB787;
+  }
+
+  .checkbox__input:checked+.checkbox__label:after {
+    opacity: 1;
+  }
+
+
+  &__result-items {
+    padding: 30px 0;
+    display: grid;
+    grid-template: 1fr / repeat(4, 1fr);
+    row-gap: 30px;
+    text-align: left;
+  }
+
+  &__result-item {
+    height: 60px;
+  }
+
+  .result-item__title {
+    @include LabGrotesque(500, 10px, 250%, rgba(255, 255, 255, 0.5));
+    letter-spacing: 0.2em;
+  }
+
+  .result-item__text {
+    @include LabGrotesque(500, 18px, 150%, #fff);
+  }
+
+  .result-item__color {
+    width: 28px;
+    height: 28px;
+    background-color: #B8542A;
+    border-radius: 90px;
+  }
+
+  .result-item__price {
+    @include LabGrotesque(500, 36px, 111%, #FFCF7A);
+    letter-spacing: 0.05em;
+  }
+
+  .section-promo__button {
+    font-family: sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    background: linear-gradient(107deg, rgba(248, 136, 101, 1) 0%, rgba(247, 212, 175, 1) 75%, rgba(246, 232, 203, 1) 100%);
+    padding: 20px 35px;
+    border-radius: 1px;
+    transition: 0.35s;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  @media screen and (max-width:1024px) {
+    &__title {
+      font-size: 36px;
+    }
+
+    &__result-items {
+      grid-template: 1fr 1fr / 1fr 1fr;
+    }
+
+  }
+
+  @media screen and (max-width:768px) {
+    &__title{
+      font-size: 30px;
+    }
+
+    &__row {
+      flex-direction: column;
+      row-gap: 30px;
+    }
+
+    &__row-image,
+    &__row-options {
+      width: 100%;
+    }
+  }
+
+  @media screen and (max-width:570px) {
+    &__title{
+      font-size: 24px;
+    }
+
+    &__result-items {
+      grid-template: repeat(4, 1fr) / 1fr;
+    }
+
+  }
+}

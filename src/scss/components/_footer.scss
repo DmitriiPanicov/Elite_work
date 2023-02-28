@@ -1,0 +1,111 @@
+.footer {
+  padding: 30px 0;
+
+  &__title {
+    display: inline-block;
+    @include LabGrotesque(600, 40px, 125%, transparent);
+    background-clip: text;
+    background-image: linear-gradient(240.22deg, #FFFFFF 45.8%, rgba(255, 255, 255, 0.084) 99.73%);
+    margin-bottom: 15px;
+  }
+
+  &__items {
+    display: grid;
+    grid-template: 1fr 1fr / repeat(3, 1fr);
+    row-gap: 30px;
+    padding-bottom: 30px;
+  }
+
+  .item__title {
+    @include LabGrotesque(500, 10px, 250%, rgba(255, 255, 255, 0.5));
+    letter-spacing: 0.2em;
+  }
+
+  .item__text {
+    display: inline-block;
+    @include LabGrotesque(500, 18px, 150%, #fff);
+
+    &:hover {
+      color: #CEB787;
+      cursor: pointer;
+    }
+  }
+
+  .item__number {
+    display: inline-block;
+    @include LabGrotesque(500, 36px, 100%, #fff);
+
+    &:hover {
+      color: #CEB787;
+      cursor: pointer;
+    }
+  }
+
+  &__button {
+    font-family: sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    color: #fff;
+    background-color: inherit;
+    padding: 15px 30px;
+    border: 1px solid #CEB787;
+    border-radius: 1px;
+    transition: 0.35s;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  &__bottom-items {
+    border-top: 1px solid gray;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__bottom-logo {
+    @include LabGrotesque(400, 20px, 100%, #fff);
+  }
+
+  &__bottom-item {
+    @include LabGrotesque(500, 10px, 250%, rgba(255, 255, 255, 0.5));
+    letter-spacing: 0.2em;
+  }
+
+  @media screen and (max-width:1024px) {
+    &__title {
+      font-size: 36px;
+    }
+
+    &__items {
+      grid-template: repeat(3, 1fr) / 1fr 1fr;
+      row-gap: 20px;
+    }
+
+    .item__number {
+      font-size: 32px;
+    }
+
+    &__bottom-items {
+      flex-direction: column;
+      row-gap: 15px;
+    }
+  }
+
+  @media screen and (max-width:768px) {
+    &__items {
+      grid-template: repeat(6, 1fr) / 1fr;
+      row-gap: 20px;
+    }
+
+    .item__number {
+      font-size: 28px;
+    }
+
+    &__title {
+      font-size: 28px;
+    }
+  }
+
+}
